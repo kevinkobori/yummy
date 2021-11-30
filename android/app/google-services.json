@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "12005194556",
+    "project_id": "remottely-yummy",
+    "storage_bucket": "remottely-yummy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12005194556:android:ccb65ca7c5c0260c1b3c39",
+        "android_client_info": {
+          "package_name": "com.remottely.yummy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12005194556-00ai6dvccs4k0ugnq4i09un47a55f58g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.remottely.yummy",
+            "certificate_hash": "4d8cb7d04de73bd964421d5ede8a910fb8da891c"
+          }
+        },
+        {
+          "client_id": "12005194556-b98ensveggl27s8iggd8jraeju9t5drh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.remottely.yummy",
+            "certificate_hash": "7347052c66a8ee6fce81e8a1a75c2bc40daaed51"
+          }
+        },
+        {
+          "client_id": "12005194556-pf7oej37j0ltuk13m7fv295ihcr9apsa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.remottely.yummy",
+            "certificate_hash": "5b368420f4b86df632350ab393061d0da158a164"
+          }
+        },
+        {
+          "client_id": "12005194556-1tb2eerecbn01f2fb75sqeq7u6f4k41l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGedV5bow8ANkdH_X2tvm4Ltax74gzChM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12005194556-1tb2eerecbn01f2fb75sqeq7u6f4k41l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
