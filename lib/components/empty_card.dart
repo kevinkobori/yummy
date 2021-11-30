@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class EmptyCard extends StatelessWidget {
-  const EmptyCard({this.title, this.svgPath});
+  const EmptyCard({this.title, this.icon});
 
   final String title;
-  final String svgPath;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +14,12 @@ class EmptyCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SvgPicture.asset(
-            svgPath,
-            color: Theme.of(context).disabledColor,
-            semanticsLabel: 'Perfil',
-          ),
+          icon,
+          // SvgPicture.asset(
+          //   icon,
+          //   color: Theme.of(context).disabledColor,
+          //   semanticsLabel: 'Perfil',
+          // ),
           const SizedBox(
             height: 16.0,
           ),

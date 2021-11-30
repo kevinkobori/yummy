@@ -1,8 +1,6 @@
-import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:yummy/utils/constants.dart';
 import '../app_state/router/app_state.dart';
@@ -46,23 +44,23 @@ class _AppShellState extends State<AppShell> {
         .createChildBackButtonDispatcher();
   }
 
-  void showNotification(String title, String message) {
-    Flushbar(
-      title: title,
-      message: message,
-      flushbarPosition: FlushbarPosition.TOP,
-      flushbarStyle: FlushbarStyle.GROUNDED,
-      isDismissible: true,
-      backgroundColor: Theme.of(context).accentColor,
-      duration: const Duration(seconds: 10),
-      icon: SvgPicture.asset(
-        'assets/icons/cart_icon.svg',
-        semanticsLabel: 'Listas',
-        height: 20,
-        color: Theme.of(context).canvasColor,
-      ),
-    ).show(context);
-  }
+  // void showNotification(String title, String message) {
+  //   Flushbar(
+  //     title: title,
+  //     message: message,
+  //     flushbarPosition: FlushbarPosition.TOP,
+  //     flushbarStyle: FlushbarStyle.GROUNDED,
+  //     isDismissible: true,
+  //     backgroundColor: Theme.of(context).accentColor,
+  //     duration: const Duration(seconds: 10),
+  //     icon: SvgPicture.asset(
+  //       'assets/icons/cart_icon.svg',
+  //       semanticsLabel: 'Listas',
+  //       height: 20,
+  //       color: Theme.of(context).canvasColor,
+  //     ),
+  //   ).show(context);
+  // }
 
   @override
   Widget build(BuildContext context) {

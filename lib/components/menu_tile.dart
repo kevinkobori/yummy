@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class MenuTile extends StatelessWidget {
   const MenuTile({
@@ -35,21 +34,21 @@ class MenuTile extends StatelessWidget {
             color: const Color(0xFFF5F6F9),
             child: Row(
               children: [
-                if (icon != null || svg != null)
+                if (icon != null)
+                  // || svg != null)
                   SizedBox(
-                    width: 30,
-                    child: icon != null
-                        ? Icon(
-                            icon,
-                            color: Theme.of(context).accentColor,
-                          )
-                        : SvgPicture.asset(
-                            svg,
-                            semanticsLabel: label,
-                            color: Theme.of(context).accentColor,
-                            width: width,
-                          ),
-                  ),
+                      width: 30,
+                      child: Icon(
+                        icon,
+                        color: Theme.of(context).accentColor,
+                      )
+                      // : SvgPicture.asset(
+                      //     svg,
+                      //     semanticsLabel: label,
+                      //     color: Theme.of(context).accentColor,
+                      //     width: width,
+                      //   ),
+                      ),
                 const SizedBox(width: 20),
                 Expanded(
                   child: Text(
@@ -131,21 +130,21 @@ class MenuTile extends StatelessWidget {
               color: const Color(0xFFF5F6F9),
               child: Row(
                 children: [
-                  if (icon != null || svg != null)
+                  if (icon != null)
+                    // || svg != null)
                     SizedBox(
-                      width: 30,
-                      child: icon != null
-                          ? Icon(
-                              icon,
-                              color: Theme.of(context).accentColor,
-                            )
-                          : SvgPicture.asset(
-                              svg,
-                              semanticsLabel: label,
-                              color: Theme.of(context).accentColor,
-                              width: width,
-                            ),
-                    ),
+                        width: 30,
+                        child: Icon(
+                          icon,
+                          color: Theme.of(context).accentColor,
+                        )
+                        // : SvgPicture.asset(
+                        //     svg,
+                        //     semanticsLabel: label,
+                        //     color: Theme.of(context).accentColor,
+                        //     width: width,
+                        //   ),
+                        ),
                   const SizedBox(width: 20),
                   Expanded(
                     child: Text(

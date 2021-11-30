@@ -1,9 +1,6 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:reorderable_carousel/reorderable_carousel.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:another_flushbar/flushbar.dart';
 import '../../../components/image_source_sheet.dart';
 import '../../../controllers/recipes/recipe.dart';
 

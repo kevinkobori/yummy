@@ -55,7 +55,7 @@ class CartScreen extends StatelessWidget {
                       child: cartManager.items.isEmpty
                           ? const EmptyCard(
                               title: 'Sua lista está vazia',
-                              svgPath: 'assets/icons/cart_icon.svg',
+                              icon: Icon(Icons.error),
                             )
                           : SafeArea(
                               child: Container(

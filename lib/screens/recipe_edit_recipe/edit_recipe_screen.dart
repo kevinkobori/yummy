@@ -82,8 +82,8 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                           hintText: "Bolo de Cenoura",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon: CustomSurffixIcon(
-                              svgIcon: "assets/yummy/icons/yummy_1.svg"),
+                          // suffixIcon: CustomSurffixIcon(
+                          //     svgIcon: "assets/yummy/icons/yummy_1.svg"),
                         ),
                         style: const TextStyle(fontSize: 16),
                         validator: (name) {
