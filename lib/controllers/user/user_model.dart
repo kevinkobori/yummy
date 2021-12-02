@@ -77,7 +77,10 @@ class UserModel {
   }
 
   void setRecipesAdmin(
-      {String recipeId, String recipeName, bool recipeExists, bool recipeDeleted}) {
+      {String recipeId,
+      String recipeName,
+      bool recipeExists,
+      bool recipeDeleted}) {
     final Map<String, dynamic> data = {
       'recipeId': recipeId,
       'recipeName': recipeName,

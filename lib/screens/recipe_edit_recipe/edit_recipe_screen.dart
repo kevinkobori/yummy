@@ -61,13 +61,7 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
           child: Form(
             key: formKey,
             child: FormField(
-              
-              
-              
-              
-              
               builder: (state) {
-                
                 checkedValue = false;
                 widget.recipe.whats = '';
                 return ListView(
@@ -84,8 +78,6 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                           hintText: "Bolo de Cenoura",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          
-                          
                         ),
                         style: const TextStyle(fontSize: 16),
                         validator: (name) {
@@ -171,8 +163,6 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                   ],
                 );
               },
-              
-              
             ),
           ),
         ),

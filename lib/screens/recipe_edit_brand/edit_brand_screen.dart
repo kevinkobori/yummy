@@ -67,8 +67,6 @@ class EditBrandScreen extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.bold),
                         hintText: "Leite Condensado Nestle",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                        
-                        
                       ),
                       style: const TextStyle(fontSize: 16),
                       validator: (name) {

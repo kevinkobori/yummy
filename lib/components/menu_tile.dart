@@ -35,20 +35,12 @@ class MenuTile extends StatelessWidget {
             child: Row(
               children: [
                 if (icon != null)
-                  
                   SizedBox(
                       width: 30,
                       child: Icon(
                         icon,
                         color: Theme.of(context).accentColor,
-                      )
-                      
-                      
-                      
-                      
-                      
-                      
-                      ),
+                      )),
                 const SizedBox(width: 20),
                 Expanded(
                   child: Text(
@@ -131,20 +123,12 @@ class MenuTile extends StatelessWidget {
               child: Row(
                 children: [
                   if (icon != null)
-                    
                     SizedBox(
                         width: 30,
                         child: Icon(
                           icon,
                           color: Theme.of(context).accentColor,
-                        )
-                        
-                        
-                        
-                        
-                        
-                        
-                        ),
+                        )),
                   const SizedBox(width: 20),
                   Expanded(
                     child: Text(

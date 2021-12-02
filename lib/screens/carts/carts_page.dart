@@ -34,14 +34,6 @@ class _CartsPageState extends State<CartsPage> {
     super.didChangeDependencies();
   }
 
-  
-  
-  
-  
-  
-  
-  
-
   @override
   Widget build(BuildContext context) {
     final Recipe recipe = Provider.of(context, listen: false);

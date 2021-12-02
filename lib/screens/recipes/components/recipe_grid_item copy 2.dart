@@ -77,7 +77,7 @@ class _RecipeGridItemState extends State<RecipeGridItem> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
-                      color: Colors.white, 
+                      color: Colors.white,
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,

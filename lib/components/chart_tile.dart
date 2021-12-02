@@ -35,20 +35,13 @@ class ChartTile extends StatelessWidget {
             color: const Color(0xFFF5F6F9),
             child: Row(
               children: [
-                if (icon != null) 
+                if (icon != null)
                   SizedBox(
                       width: 30,
                       child: Icon(
                         icon,
                         color: Theme.of(context).accentColor,
-                      )
-                      
-                      
-                      
-                      
-                      
-                      
-                      ),
+                      )),
                 const SizedBox(width: 20),
                 Expanded(
                   child: child,
@@ -131,14 +124,7 @@ class ChartTile extends StatelessWidget {
                         child: Icon(
                           icon,
                           color: Theme.of(context).accentColor,
-                        )
-                        
-                        
-                        
-                        
-                        
-                        
-                        ),
+                        )),
                   const SizedBox(width: 20),
                   Expanded(
                     child: child,

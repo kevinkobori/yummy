@@ -69,8 +69,6 @@ class _EditIngredientScreenState extends State<EditIngredientScreen> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                           hintText: "Leite Condensado",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          
-                          
                         ),
                         style: const TextStyle(fontSize: 16),
                         validator: (name) {

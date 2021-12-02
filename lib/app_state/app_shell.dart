@@ -44,24 +44,6 @@ class _AppShellState extends State<AppShell> {
         .createChildBackButtonDispatcher();
   }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
   @override
   Widget build(BuildContext context) {
     final appState = widget.appState;

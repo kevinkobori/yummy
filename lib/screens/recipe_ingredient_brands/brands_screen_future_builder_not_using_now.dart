@@ -23,12 +23,7 @@ class RecipeBrandsScreen extends StatefulWidget {
 
 class _RecipeBrandsScreenState extends State<RecipeBrandsScreen> {
   bool onSearchActive = false;
-  
-  
-  
-  
-  
-  
+
   @override
   void didChangeDependencies() {
     final BrandManager brandManager = Provider.of(context, listen: false);

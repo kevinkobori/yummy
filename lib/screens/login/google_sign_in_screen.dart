@@ -11,20 +11,6 @@ class GoogleSignInScreen extends StatefulWidget {
 
 class _GoogleSignInScreenState extends State<GoogleSignInScreen>
     with TickerProviderStateMixin {
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-    
- 
-
   @override
   Widget build(BuildContext context) {
     final userManager = Provider.of<UserManager>(context, listen: false);

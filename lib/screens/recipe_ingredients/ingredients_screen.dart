@@ -27,14 +27,6 @@ class RecipeIngredientsScreen extends StatefulWidget {
 
 class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
   bool onSearchActive = false;
-  
-  
-  
-  
-  
-
-  
-  
 
   @override
   void didChangeDependencies() {

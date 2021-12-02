@@ -19,11 +19,6 @@ class FormError extends StatelessWidget {
   Row formErrorText({String error}) {
     return Row(
       children: [
-        
-        
-        
-        
-        
         const Icon(Icons.error),
         const SizedBox(
           width: 10,

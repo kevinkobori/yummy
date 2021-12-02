@@ -167,10 +167,6 @@ class Recipe extends ChangeNotifier {
     loading = false;
   }
 
-  
-  
-  
-
   void delete(String recipeId) {
     FirebaseFirestore.instance
         .doc('recipes/$recipeId')

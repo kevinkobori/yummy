@@ -60,15 +60,6 @@ class RecipeManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  
-  
-  
-
-  
-  
-  
-  
-  
   void delete({BuildContext context, String recipeId, String recipeName}) {
     final Recipe recipe = Provider.of(context, listen: false);
     final UserManager userManager = Provider.of(context, listen: false);

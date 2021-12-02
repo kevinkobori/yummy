@@ -15,11 +15,6 @@ class EmptyCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           icon,
-          
-          
-          
-          
-          
           const SizedBox(
             height: 16.0,
           ),
