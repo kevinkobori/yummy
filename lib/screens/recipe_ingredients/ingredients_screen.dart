@@ -27,13 +27,21 @@ class RecipeIngredientsScreen extends StatefulWidget {
 
 class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
   bool onSearchActive = false;
+  // @override
+  // void initState() {
+  //   final IngredientManager ingredientManager =
+  //       Provider.of(context, listen: false);
+  //   ingredientManager.search = '';
+
+  //   super.initState();
+  // }
+
   @override
-  void initState() {
+  void didChangeDependencies() {
     final IngredientManager ingredientManager =
         Provider.of(context, listen: false);
     ingredientManager.search = '';
-
-    super.initState();
+    super.didChangeDependencies();
   }
 
   @override
@@ -75,7 +83,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(15.0),
                                       ),
-                                      color:  const Color(0xFFF5F6F9),
+                                      color: const Color(0xFFF5F6F9),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -112,7 +120,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(15.0),
                                       ),
-                                       color: const Color(0xFFF5F6F9),
+                                      color: const Color(0xFFF5F6F9),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:

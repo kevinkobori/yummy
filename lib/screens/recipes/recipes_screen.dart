@@ -26,12 +26,20 @@ class RecipesScreen extends StatefulWidget {
 class _RecipesScreenState extends State<RecipesScreen> {
   bool onSearchActive = false;
 
+  // @override
+  // void initState() {
+  //   final RecipeManager recipeManager = Provider.of(context, listen: false);
+  //   recipeManager.loadRecipes();
+  //   recipeManager.search = '';
+  //   super.initState();
+  // }
+
   @override
-  void initState() {
+  void didChangeDependencies() {
     final RecipeManager recipeManager = Provider.of(context, listen: false);
     recipeManager.loadRecipes();
     recipeManager.search = '';
-    super.initState();
+    super.didChangeDependencies();
   }
 
   @override
@@ -40,7 +48,6 @@ class _RecipesScreenState extends State<RecipesScreen> {
       builder: (_, recipeManager, __) {
         final filteredRecipes = recipeManager.filteredRecipes;
         return Scaffold(
-
           appBar: PreferredSize(
             preferredSize: Size(MediaQuery.of(context).size.width, 56),
             child: CustomManagerAppBar(
@@ -65,10 +72,10 @@ class _RecipesScreenState extends State<RecipesScreen> {
                   delay: Duration(milliseconds: index % 2 == 0 ? 0 : 200),
                   child: Padding(
                       padding: EdgeInsets.fromLTRB(
-                        index % 2 == 0 ? 6 : 3,
-                        index % 2 == 0 ? 3 : 3,
-                        index % 2 == 0 ? 3 : 6,
-                        index % 2 == 0 ? 3 : 3,
+                        index % 2 == 0 ? 12 : 6,
+                        index % 2 == 0 ? 6 : 6,
+                        index % 2 == 0 ? 6 : 12,
+                        index % 2 == 0 ? 6 : 6,
                       ),
                       child: RecipeGridItem(filteredRecipes[index])),
                 ),

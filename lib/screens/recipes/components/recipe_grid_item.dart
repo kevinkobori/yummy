@@ -40,40 +40,37 @@ class _RecipeGridItemState extends State<RecipeGridItem> {
               ),
             );
           },
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AspectRatio(
-                  aspectRatio: 1,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.network(
-                      widget.recipe.images[0],
-                      fit: BoxFit.cover,
-                    ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AspectRatio(
+                aspectRatio: 1,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    widget.recipe.images[0],
+                    fit: BoxFit.cover,
                   ),
                 ),
-                const SizedBox(
-                  height: 4,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 2.0, right: 2.0),
-                  child: Text(
-                    widget.recipe.name,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: AppColors.azulMarinhoEscuro,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 2.0, right: 2.0),
+                child: Text(
+                  widget.recipe.name,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: AppColors.azulMarinhoEscuro,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
-                const Spacer(),
-              ],
-            ),
+              ),
+              const Spacer(),
+            ],
           ),
         );
       },

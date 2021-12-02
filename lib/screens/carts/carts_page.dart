@@ -27,11 +27,20 @@ class _CartsPageState extends State<CartsPage> {
   bool onSearchActive = false;
 
   @override
-  void initState() {
+  void didChangeDependencies() {
     final CartManager cartManager = Provider.of(context, listen: false);
+    cartManager.loadCarts();
     cartManager.search = '';
-    super.initState();
+    super.didChangeDependencies();
   }
+
+  // @override
+  // void initState() {
+  //   final CartManager cartManager = Provider.of(context, listen: false);
+  //   cartManager.loadCarts();
+  //   cartManager.search = '';
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {

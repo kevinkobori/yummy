@@ -12,14 +12,14 @@ class GoogleSignInScreen extends StatefulWidget {
 class _GoogleSignInScreenState extends State<GoogleSignInScreen>
     with TickerProviderStateMixin {
   // GifController controller;
-  @override
-  void initState() {
-    super.initState();
-    // controller = GifController(vsync: this);
-    // controller.repeat(min: 0, max: 200, period: const Duration(seconds: 6));
-    // Future.delayed(const Duration(seconds: 5)).then((value) => controller
-    //     .repeat(min: 130, max: 160, period: const Duration(seconds: 1)));
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   // controller = GifController(vsync: this);
+  //   // controller.repeat(min: 0, max: 200, period: const Duration(seconds: 6));
+  //   // Future.delayed(const Duration(seconds: 5)).then((value) => controller
+  //   //     .repeat(min: 130, max: 160, period: const Duration(seconds: 1)));
+  // }
 
   @override
   void dispose() {
