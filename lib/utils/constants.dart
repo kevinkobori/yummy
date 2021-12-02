@@ -81,6 +81,8 @@ class AppColors {
   static Color azulClaro = Colors.blue[300];
   static Color azulMuitoClaro = Colors.blue[200];
   static Color azulExtraClaro = Colors.blue[100];
+  static Color azulMarinhoEscuro = Colors.blueGrey[900];
+
   static Color rosaClaro = Colors.pink[300];
   static Color rosaMuitoClaro = Colors.pink[200];
   static Color rosaExtraClaro = Colors.pink[100];

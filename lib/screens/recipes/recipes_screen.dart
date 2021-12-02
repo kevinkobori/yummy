@@ -40,6 +40,7 @@ class _RecipesScreenState extends State<RecipesScreen> {
       builder: (_, recipeManager, __) {
         final filteredRecipes = recipeManager.filteredRecipes;
         return Scaffold(
+
           appBar: PreferredSize(
             preferredSize: Size(MediaQuery.of(context).size.width, 56),
             child: CustomManagerAppBar(
@@ -57,12 +58,19 @@ class _RecipesScreenState extends State<RecipesScreen> {
                 controller: widget._controller,
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,
-                  childAspectRatio: 0.88,
+                  childAspectRatio: 0.90,
                 ),
                 itemCount: filteredRecipes.length,
                 itemBuilder: (_, index) => DelayedDisplay(
-                  delay: Duration(milliseconds: 200 * index),
-                  child: RecipeGridItem(filteredRecipes[index], 'store'),
+                  delay: Duration(milliseconds: index % 2 == 0 ? 0 : 200),
+                  child: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        index % 2 == 0 ? 6 : 3,
+                        index % 2 == 0 ? 3 : 3,
+                        index % 2 == 0 ? 3 : 6,
+                        index % 2 == 0 ? 3 : 3,
+                      ),
+                      child: RecipeGridItem(filteredRecipes[index])),
                 ),
               );
             },

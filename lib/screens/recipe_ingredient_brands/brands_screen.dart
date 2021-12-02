@@ -96,7 +96,6 @@ class _RecipeBrandsScreenState extends State<RecipeBrandsScreen> {
                                   ),
                                   child: BrandGridItem(
                                     filteredBrands[index],
-                                    'store',
                                     ingredient.id,
                                     ingredient.name,
                                   ),

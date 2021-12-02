@@ -9,9 +9,8 @@ import '../../recipe_ingredient_brand/ingredient_brand_screen.dart';
 
 class BrandGridItem extends StatefulWidget {
   const BrandGridItem(
-      this.brand, this.pageType, this.ingredientId, this.ingredientTitle);
+      this.brand, this.ingredientId, this.ingredientTitle);
   final Brand brand;
-  final String pageType;
   final String ingredientId;
   final String ingredientTitle;
 
@@ -37,7 +36,7 @@ class _BrandGridItemState extends State<BrandGridItem> {
         height: 70,
         padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.azulClaro),
+          border: Border.all(color: AppColors.azulMarinhoEscuro),
           borderRadius: const BorderRadius.all(Radius.circular(15.0)),
           color: const Color(0xFFF5F6F9),
         ),

@@ -71,10 +71,11 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         16, 16, 16, 16),
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: AppColors.azulClaro),
+                                          color: AppColors.azulMarinhoEscuro),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(15.0),
                                       ),
+                                      color:  const Color(0xFFF5F6F9),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -83,33 +84,16 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         Text(
                                           'Passos da receita:',
                                           style: TextStyle(
-                                            color: AppColors.azulClaro,
+                                            color: AppColors.rosaClaro,
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    margin:
-                                        const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                                    padding: const EdgeInsets.fromLTRB(
-                                        16, 16, 16, 16),
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                          color: AppColors.azulClaro),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(15.0)),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
+                                        SizedBox(height: 16),
                                         Text(
                                           recipeProvider.description,
                                           style: TextStyle(
-                                            color: AppColors.azulClaro,
+                                            color: AppColors.azulMarinhoEscuro,
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -124,10 +108,11 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         16, 16, 16, 16),
                                     decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: AppColors.azulClaro),
+                                          color: AppColors.rosaClaro),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(15.0),
                                       ),
+                                       color: const Color(0xFFF5F6F9),
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -136,7 +121,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         Text(
                                           'Lista de ingredientes:',
                                           style: TextStyle(
-                                            color: AppColors.azulClaro,
+                                            color: AppColors.rosaClaro,
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -189,10 +174,12 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                               16, 16, 16, 16),
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                                color: AppColors.azulClaro),
+                                                color: AppColors
+                                                    .azulMarinhoEscuro),
                                             borderRadius:
                                                 const BorderRadius.all(
                                                     Radius.circular(15.0)),
+                                            color: const Color(0xFFF5F6F9),
                                           ),
                                           child: Column(
                                             crossAxisAlignment:
@@ -201,35 +188,17 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                               Text(
                                                 'Passos da receita:',
                                                 style: TextStyle(
-                                                  color: AppColors.azulClaro,
+                                                  color: AppColors.rosaClaro,
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              16, 8, 16, 8),
-                                          padding: const EdgeInsets.fromLTRB(
-                                              16, 16, 16, 16),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: AppColors.azulClaro),
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                              Radius.circular(15.0),
-                                            ),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.stretch,
-                                            children: [
+                                              SizedBox(height: 16),
                                               Text(
                                                 recipeProvider.description,
                                                 style: TextStyle(
-                                                  color: AppColors.azulClaro,
+                                                  color: AppColors
+                                                      .azulMarinhoEscuro,
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -244,11 +213,12 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                               16, 16, 16, 16),
                                           decoration: BoxDecoration(
                                             border: Border.all(
-                                                color: AppColors.azulClaro),
+                                                color: AppColors.rosaClaro),
                                             borderRadius:
                                                 const BorderRadius.all(
                                               Radius.circular(15.0),
                                             ),
+                                            color: const Color(0xFFF5F6F9),
                                           ),
                                           child: Column(
                                             crossAxisAlignment:
@@ -257,7 +227,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                               Text(
                                                 'Lista de ingredientes:',
                                                 style: TextStyle(
-                                                  color: AppColors.azulClaro,
+                                                  color: AppColors.rosaClaro,
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                 ),

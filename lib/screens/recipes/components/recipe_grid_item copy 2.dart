@@ -40,32 +40,44 @@ class _RecipeGridItemState extends State<RecipeGridItem> {
               ),
             );
           },
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Stack(
               children: [
                 AspectRatio(
-                  aspectRatio: 1,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.network(
-                      widget.recipe.images[0],
-                      fit: BoxFit.cover,
+                  aspectRatio: 0.88,
+                  child: Image.network(
+                    widget.recipe.images[0],
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                AspectRatio(
+                  aspectRatio: 0.88,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        stops: [
+                          0.0,
+                          0.3,
+                        ],
+                        colors: [
+                          Colors.black.withOpacity(0.8),
+                          Colors.transparent,
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 4,
-                ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 2.0, right: 2.0),
+                  padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
                   child: Text(
                     widget.recipe.name,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
-                      color: AppColors.azulMarinhoEscuro,
+                      color: Colors.white, // AppColors.rosaClaro,
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,

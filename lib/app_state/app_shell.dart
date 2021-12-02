@@ -82,14 +82,16 @@ class _AppShellState extends State<AppShell> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: AppColors.azulMuitoClaro,
+              color: Colors.blueGrey[900],//AppColors.azulMuitoClaro,
+              blurRadius: 10,
+              offset: Offset(0,4),
             ),
           ],
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.rosaClaro,
-          unselectedItemColor: AppColors.azulClaro,
+          unselectedItemColor: Colors.blueGrey[900],//AppColors.azulClaro,
           currentIndex: appState.selectedIndex.toInt(),
           onTap: (newIndex) {
             appState.selectedIndex = newIndex.toDouble();
@@ -97,7 +99,7 @@ class _AppShellState extends State<AppShell> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              label: "Encontrar",
+              label: "Pesquisar",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.view_list_rounded),

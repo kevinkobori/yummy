@@ -25,7 +25,6 @@ class _IngredientGridItemState extends State<IngredientGridItem> {
     return GestureDetector(
       onTap: () {
         ingredient.setIngredient(widget.ingredient);
-
         Navigator.push(
           context,
           MaterialPageRoute(

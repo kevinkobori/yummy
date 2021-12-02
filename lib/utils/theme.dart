@@ -9,7 +9,7 @@ ThemeData theme() {
     }),
     scaffoldBackgroundColor: Colors.white,
     canvasColor: Colors.white,
-    accentColor: AppColors.rosaClaro,
+    accentColor: AppColors.rosaClaro,//AppColors.rosaClaro,
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
@@ -59,16 +59,16 @@ TextTheme textTheme() {
 AppBarTheme appBarTheme() {
   return AppBarTheme(
     color: Colors.white,
-    elevation: 1,
-    shadowColor: AppColors.azulClaro,
+    elevation: 4,
+    shadowColor: Colors.blueGrey[900],//AppColors.azulClaro,
     centerTitle: true,
     iconTheme: IconThemeData(
-      color: AppColors.azulClaro,
+      color: AppColors.azulMarinhoEscuro,
     ),
     titleSpacing: 0,
     textTheme: TextTheme(
       headline6: TextStyle(
-        color: AppColors.azulClaro,
+        color: AppColors.azulMarinhoEscuro,
         fontSize: 18,
         fontWeight: FontWeight.bold,
       ),

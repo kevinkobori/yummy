@@ -27,7 +27,7 @@ class Graph3 extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.azulClaro), //todo
+        border: Border.all(color: AppColors.azulMarinhoEscuro), //todo
         borderRadius: const BorderRadius.all(Radius.circular(15.0)),
       ),
       child: SfCartesianChart(

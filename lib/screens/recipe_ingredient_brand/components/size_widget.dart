@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:intl/intl.dart';
+import 'package:yummy/utils/constants.dart';
 import '../../../controllers/brands/brand.dart';
 import '../../../controllers/brands/brand_size.dart';
 
@@ -19,7 +20,7 @@ class SizeWidget extends StatelessWidget {
     if (!size.hasStock)
       color = Colors.red.withAlpha(50);
     else if (selected)
-      color = Theme.of(context).accentColor;
+      color = AppColors.azulClaro;//Theme.of(context).accentColor;
     else
       color = Colors.grey;
 
