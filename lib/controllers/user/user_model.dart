@@ -97,6 +97,13 @@ class UserModel {
     saveData();
   }
 
+  void deleteRecipeAdmin({String recipeId}) {
+    final int index = recipesAdmin
+        .indexWhere((e) => e['recipeId'].toString() == recipeId.toString());
+    recipesAdmin.removeAt(index);
+    saveData();
+  }
+
   void setCpf(String cpf) {
     this.cpf = cpf;
     saveData();

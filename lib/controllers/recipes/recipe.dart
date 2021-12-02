@@ -167,10 +167,16 @@ class Recipe extends ChangeNotifier {
     loading = false;
   }
 
-  void delete(String recipeId) {
+  void setDeleted(String recipeId) {
     FirebaseFirestore.instance
         .doc('recipes/$recipeId')
         .update({'deleted': true});
+  }
+
+  void delete({String recipeId}) {
+    FirebaseFirestore.instance
+        .doc('recipes/$recipeId')
+        .delete();
   }
 
   Recipe clone() {

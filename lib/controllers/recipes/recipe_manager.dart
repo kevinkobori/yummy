@@ -63,13 +63,14 @@ class RecipeManager extends ChangeNotifier {
   void delete({BuildContext context, String recipeId, String recipeName}) {
     final Recipe recipe = Provider.of(context, listen: false);
     final UserManager userManager = Provider.of(context, listen: false);
-    recipe.delete(recipe.id);
-    userManager.user.setRecipesAdmin(
-      recipeId: recipeId,
-      recipeName: recipeName,
-      recipeExists: true,
-      recipeDeleted: true,
-    );
+    recipe.delete(recipeId: recipeId);
+    userManager.user.deleteRecipeAdmin(recipeId: recipeId);
+    // userManager.user.setRecipesAdmin(
+    //   recipeId: recipeId,
+    //   recipeName: recipeName,
+    //   recipeExists: true,
+    //   recipeDeleted: true,
+    // );
     recipeRecipe.removeWhere((p) => p.id == recipe.id);
     notifyListeners();
   }
