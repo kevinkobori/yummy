@@ -8,8 +8,7 @@ import '../../../controllers/brands/brand.dart';
 import '../../recipe_ingredient_brand/ingredient_brand_screen.dart';
 
 class BrandGridItem extends StatefulWidget {
-  const BrandGridItem(
-      this.brand, this.ingredientId, this.ingredientTitle);
+  const BrandGridItem(this.brand, this.ingredientId, this.ingredientTitle);
   final Brand brand;
   final String ingredientId;
   final String ingredientTitle;

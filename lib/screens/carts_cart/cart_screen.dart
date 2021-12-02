@@ -49,84 +49,91 @@ class CartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                body: CustomScrollView(
-                  slivers: [
-                    SliverToBoxAdapter(
-                      child: cartManager.items.isEmpty
-                          ? const EmptyCard(
-                              title: 'Sua lista está vazia',
-                              icon: Icon(Icons.error),
-                            )
-                          : SafeArea(
-                              child: Container(
-                                margin: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(10),
-                                      topRight: Radius.circular(10),
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10)),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: AppColors.azulClaro,
-                                      spreadRadius: 1,
-                                      blurRadius: 2,
+                body: cartManager.items.isEmpty
+                    ? const EmptyCard(
+                        title: 'Sua lista está vazia',
+                        icon: Icon(Icons.error),
+                      )
+                    : ListView.builder(
+                        physics: const ClampingScrollPhysics(),
+                        itemCount: cartManager.items.length,
+                        itemBuilder: (_, index) {
+                          return cartManager.items.length - 1 == index
+                              ? Column(
+                                  children: [
+                                    DelayedDisplay(
+                                      delay: const Duration(milliseconds: 400),
+                                      child: CartTile(
+                                          cartManager.items[index], true),
+                                    ),
+                                    Divider(
+                                      color: AppColors.azulMarinhoEscuro,
+                                      thickness: 2,
+                                    ),
+                                    DelayedDisplay(
+                                      delay: const Duration(milliseconds: 800),
+                                      slidingBeginOffset:
+                                          const Offset(0.20, 0.0),
+                                      child: PriceCard(
+                                        cartManager: cartManager,
+                                      ),
                                     ),
                                   ],
-                                ),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-                                      Column(
-                                        children: cartManager.items
-                                            .map(
-                                              (cartBrand) => DelayedDisplay(
-                                                  delay: const Duration(
-                                                      milliseconds: 400),
-                                                  child: CartTile(
-                                                      cartBrand, true)),
-                                            )
-                                            .toList(),
-                                      ),
-                                      Container(
-                                        margin: const EdgeInsets.all(16),
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: const BorderRadius.only(
-                                              topLeft: Radius.circular(10),
-                                              topRight: Radius.circular(10),
-                                              bottomLeft: Radius.circular(10),
-                                              bottomRight: Radius.circular(10)),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: AppColors.azulClaro,
-                                              spreadRadius: 1,
-                                              blurRadius: 2,
-                                            ),
-                                          ],
-                                        ),
-                                        child: DelayedDisplay(
-                                          delay:
-                                              const Duration(milliseconds: 800),
-                                          slidingBeginOffset:
-                                              const Offset(0.20, 0.0),
-                                          child: PriceCard(
-                                            cartManager: cartManager,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                    ),
-                  ],
-                ),
+                                )
+                              : Column(
+                                  children: [
+                                    DelayedDisplay(
+                                      delay: const Duration(milliseconds: 400),
+                                      child: CartTile(
+                                          cartManager.items[index], true),
+                                    ),
+                                    Divider(
+                                      color: AppColors.azulMarinhoEscuro,
+                                      thickness: 2,
+                                    ),
+                                  ],
+                                );
+                        },
+                      ),
+                // Container(
+                //   height: 800,
+                //   child: Column(
+                //       crossAxisAlignment: CrossAxisAlignment.end,
+                //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //       children: <Widget>[
+                //         ListView.builder(
+                //           physics: const ClampingScrollPhysics(),
+                //           itemCount: cartManager.items.length,
+                //           itemBuilder: (_, index) {
+                //             return Column(
+                //               children: [
+                //                 DelayedDisplay(
+                //                   delay:
+                //                       const Duration(milliseconds: 400),
+                //                   child: CartTile(
+                //                       cartManager.items[index], true),
+                //                 ),
+                //                 cartManager.items.length - 1 == index
+                //                     ? Container()
+                //                     : Divider(
+                //                         color:
+                //                             AppColors.azulMarinhoEscuro,
+                //                         thickness: 2,
+                //                       ),
+                //               ],
+                //             );
+                //           },
+                //         ),
+                //         DelayedDisplay(
+                //           delay: const Duration(milliseconds: 800),
+                //           slidingBeginOffset: const Offset(0.20, 0.0),
+                //           child: PriceCard(
+                //             cartManager: cartManager,
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                // ),
               );
             },
           );

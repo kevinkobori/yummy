@@ -27,7 +27,12 @@ class YummyBottomSearchAppBarWidget extends StatelessWidget {
           fillColor: AppColors.branco,
           contentPadding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
           suffixIcon: IconButton(
-              onPressed: onClose, icon: const Icon(Icons.close_rounded)),
+            onPressed: onClose,
+            icon: Icon(
+              Icons.close_rounded,
+              color: AppColors.azulMarinhoEscuro,
+            ),
+          ),
           hintText: hintText,
           hintStyle: TextStyle(
             fontSize: 16,

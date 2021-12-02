@@ -20,7 +20,7 @@ class SizeWidget extends StatelessWidget {
     if (!size.hasStock)
       color = Colors.red.withAlpha(50);
     else if (selected)
-      color = AppColors.azulClaro;//Theme.of(context).accentColor;
+      color = AppColors.azulClaro; //Theme.of(context).accentColor;
     else
       color = Colors.grey;
 

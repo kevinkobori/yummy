@@ -32,7 +32,7 @@ class YummyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: AppColors.rosaClaro,
+      statusBarColor: AppColors.azulMarinhoEscuro,
     ));
     return MultiProvider(
       providers: [

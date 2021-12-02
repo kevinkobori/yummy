@@ -9,7 +9,7 @@ ThemeData theme() {
     }),
     scaffoldBackgroundColor: Colors.white,
     canvasColor: Colors.white,
-    accentColor: AppColors.rosaClaro,//AppColors.rosaClaro,
+    accentColor: AppColors.rosaClaro, //AppColors.rosaClaro,
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
@@ -60,7 +60,7 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
     color: Colors.white,
     elevation: 4,
-    shadowColor: Colors.blueGrey[900],//AppColors.azulClaro,
+    shadowColor: Colors.blueGrey[900], //AppColors.azulClaro,
     centerTitle: true,
     iconTheme: IconThemeData(
       color: AppColors.azulMarinhoEscuro,

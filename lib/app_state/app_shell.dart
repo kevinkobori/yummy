@@ -82,16 +82,16 @@ class _AppShellState extends State<AppShell> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.blueGrey[900],//AppColors.azulMuitoClaro,
+              color: Colors.blueGrey[900], //AppColors.azulMuitoClaro,
               blurRadius: 10,
-              offset: Offset(0,4),
+              offset: Offset(0, 4),
             ),
           ],
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.rosaClaro,
-          unselectedItemColor: Colors.blueGrey[900],//AppColors.azulClaro,
+          unselectedItemColor: Colors.blueGrey[900], //AppColors.azulClaro,
           currentIndex: appState.selectedIndex.toInt(),
           onTap: (newIndex) {
             appState.selectedIndex = newIndex.toDouble();
