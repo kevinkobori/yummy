@@ -71,8 +71,11 @@ class RecipeManagerPage extends StatelessWidget {
               child: MenuTile(
                 dismissibleId: recipe.id,
                 onDismissed: (_) {
-                  Provider.of<RecipeManager>(context, listen: false)
-                      .delete(context, recipe.id);
+                  Provider.of<RecipeManager>(context, listen: false).delete(
+                    context: context,
+                    recipeId: recipe.id,
+                    recipeName: recipe.name,
+                  );
                 },
                 endIcon: Icons.arrow_forward_ios,
                 onEndIcon: () {},

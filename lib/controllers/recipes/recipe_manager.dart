@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:yummy/controllers/user/user_manager.dart';
 import 'recipe.dart';
 
 class RecipeManager extends ChangeNotifier {
@@ -59,19 +60,26 @@ class RecipeManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  // void delete(BuildContext context, String recipeId) {
-  //   final UserManager userManager = Provider.of(context, listen: false);
-  //   final Recipe recipe = Provider.of(context, listen: false);
+  
+  
+  
 
-  //   recipe.delete(recipeId);
-  //   recipeRecipe.removeWhere((p) => p.id == recipeId);
-  //   userManager.removeRecipeAdmin(recipeId);
-  //   notifyListeners();
-  // }
-  void delete(BuildContext context, String recipeId) {
+  
+  
+  
+  
+  
+  void delete({BuildContext context, String recipeId, String recipeName}) {
     final Recipe recipe = Provider.of(context, listen: false);
-    recipe.delete(recipeId);
-    recipeRecipe.removeWhere((p) => p.id == recipeId);
+    final UserManager userManager = Provider.of(context, listen: false);
+    recipe.delete(recipe.id);
+    userManager.user.setRecipesAdmin(
+      recipeId: recipeId,
+      recipeName: recipeName,
+      recipeExists: true,
+      recipeDeleted: true,
+    );
+    recipeRecipe.removeWhere((p) => p.id == recipe.id);
     notifyListeners();
   }
 }

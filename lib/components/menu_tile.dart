@@ -35,19 +35,19 @@ class MenuTile extends StatelessWidget {
             child: Row(
               children: [
                 if (icon != null)
-                  // || svg != null)
+                  
                   SizedBox(
                       width: 30,
                       child: Icon(
                         icon,
                         color: Theme.of(context).accentColor,
                       )
-                      // : SvgPicture.asset(
-                      //     svg,
-                      //     semanticsLabel: label,
-                      //     color: Theme.of(context).accentColor,
-                      //     width: width,
-                      //   ),
+                      
+                      
+                      
+                      
+                      
+                      
                       ),
                 const SizedBox(width: 20),
                 Expanded(
@@ -131,19 +131,19 @@ class MenuTile extends StatelessWidget {
               child: Row(
                 children: [
                   if (icon != null)
-                    // || svg != null)
+                    
                     SizedBox(
                         width: 30,
                         child: Icon(
                           icon,
                           color: Theme.of(context).accentColor,
                         )
-                        // : SvgPicture.asset(
-                        //     svg,
-                        //     semanticsLabel: label,
-                        //     color: Theme.of(context).accentColor,
-                        //     width: width,
-                        //   ),
+                        
+                        
+                        
+                        
+                        
+                        
                         ),
                   const SizedBox(width: 20),
                   Expanded(

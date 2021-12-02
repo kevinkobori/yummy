@@ -45,9 +45,11 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.delete, color: Colors.red),
                   onPressed: () {
-                    context
-                        .read<RecipeManager>()
-                        .delete(context, widget.recipe.id);
+                    context.read<RecipeManager>().delete(
+                          context: context,
+                          recipeId: widget.recipe.id,
+                          recipeName: widget.recipe.name,
+                        );
                     Navigator.of(context).pop();
                   },
                 ),
@@ -59,13 +61,13 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
           child: Form(
             key: formKey,
             child: FormField(
-              // initialValue: widget.recipe.type,
-              // validator: (type) {
-              //   if (type == null) return 'selecione um igrediente';
-              //   return null;
-              // },
+              
+              
+              
+              
+              
               builder: (state) {
-                // state.setValue(0.1);
+                
                 checkedValue = false;
                 widget.recipe.whats = '';
                 return ListView(
@@ -82,8 +84,8 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                           hintText: "Bolo de Cenoura",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          // suffixIcon: CustomSurffixIcon(
-                          //     svgIcon: "assets/yummy/icons/yummy_1.svg"),
+                          
+                          
                         ),
                         style: const TextStyle(fontSize: 16),
                         validator: (name) {
@@ -169,8 +171,8 @@ class _EditRecipeScreen extends State<EditRecipeScreen> {
                   ],
                 );
               },
-              // onSaved: (value) =>
-              //     widget.recipe.type = double.parse(value.toString()),
+              
+              
             ),
           ),
         ),

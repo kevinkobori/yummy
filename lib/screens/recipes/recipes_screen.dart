@@ -26,13 +26,13 @@ class RecipesScreen extends StatefulWidget {
 class _RecipesScreenState extends State<RecipesScreen> {
   bool onSearchActive = false;
 
-  // @override
-  // void initState() {
-  //   final RecipeManager recipeManager = Provider.of(context, listen: false);
-  //   recipeManager.loadRecipes();
-  //   recipeManager.search = '';
-  //   super.initState();
-  // }
+  
+  
+  
+  
+  
+  
+  
 
   @override
   void didChangeDependencies() {

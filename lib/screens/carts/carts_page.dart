@@ -34,13 +34,13 @@ class _CartsPageState extends State<CartsPage> {
     super.didChangeDependencies();
   }
 
-  // @override
-  // void initState() {
-  //   final CartManager cartManager = Provider.of(context, listen: false);
-  //   cartManager.loadCarts();
-  //   cartManager.search = '';
-  //   super.initState();
-  // }
+  
+  
+  
+  
+  
+  
+  
 
   @override
   Widget build(BuildContext context) {

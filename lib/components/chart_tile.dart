@@ -35,19 +35,19 @@ class ChartTile extends StatelessWidget {
             color: const Color(0xFFF5F6F9),
             child: Row(
               children: [
-                if (icon != null) // || svg != null)
+                if (icon != null) 
                   SizedBox(
                       width: 30,
                       child: Icon(
                         icon,
                         color: Theme.of(context).accentColor,
                       )
-                      // : SvgPicture.asset(
-                      //     svg,
-                      //     semanticsLabel: label,
-                      //     color: Theme.of(context).accentColor,
-                      //     width: width,
-                      //   ),
+                      
+                      
+                      
+                      
+                      
+                      
                       ),
                 const SizedBox(width: 20),
                 Expanded(
@@ -132,12 +132,12 @@ class ChartTile extends StatelessWidget {
                           icon,
                           color: Theme.of(context).accentColor,
                         )
-                        // : SvgPicture.asset(
-                        //     svg,
-                        //     semanticsLabel: label,
-                        //     color: Theme.of(context).accentColor,
-                        //     width: width,
-                        //   ),
+                        
+                        
+                        
+                        
+                        
+                        
                         ),
                   const SizedBox(width: 20),
                   Expanded(

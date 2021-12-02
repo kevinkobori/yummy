@@ -69,8 +69,8 @@ class _EditIngredientScreenState extends State<EditIngredientScreen> {
                               fontSize: 20, fontWeight: FontWeight.bold),
                           hintText: "Leite Condensado",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          // suffixIcon: CustomSurffixIcon(
-                          //     svgIcon: "assets/yummy/icons/yummy_1.svg"),
+                          
+                          
                         ),
                         style: const TextStyle(fontSize: 16),
                         validator: (name) {

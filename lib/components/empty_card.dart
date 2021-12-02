@@ -15,11 +15,11 @@ class EmptyCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           icon,
-          // SvgPicture.asset(
-          //   icon,
-          //   color: Theme.of(context).disabledColor,
-          //   semanticsLabel: 'Perfil',
-          // ),
+          
+          
+          
+          
+          
           const SizedBox(
             height: 16.0,
           ),

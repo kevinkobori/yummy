@@ -24,12 +24,12 @@ class RecipeBrandsScreen extends StatefulWidget {
 }
 
 class _RecipeBrandsScreenState extends State<RecipeBrandsScreen> {
-  // @override
-  // void initState() {
-  //   final BrandManager brandManager = Provider.of(context, listen: false);
-  //   brandManager.search = '';
-  //   super.initState();
-  // }
+  
+  
+  
+  
+  
+  
 
   @override
   void didChangeDependencies() {

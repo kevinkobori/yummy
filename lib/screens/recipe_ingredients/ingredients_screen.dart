@@ -27,14 +27,14 @@ class RecipeIngredientsScreen extends StatefulWidget {
 
 class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
   bool onSearchActive = false;
-  // @override
-  // void initState() {
-  //   final IngredientManager ingredientManager =
-  //       Provider.of(context, listen: false);
-  //   ingredientManager.search = '';
+  
+  
+  
+  
+  
 
-  //   super.initState();
-  // }
+  
+  
 
   @override
   void didChangeDependencies() {

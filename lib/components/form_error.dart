@@ -19,11 +19,11 @@ class FormError extends StatelessWidget {
   Row formErrorText({String error}) {
     return Row(
       children: [
-        // SvgPicture.asset(
-        //   "assets/icons/Error.svg",
-        //   height: 14,
-        //   width: 14,
-        // ),
+        
+        
+        
+        
+        
         const Icon(Icons.error),
         const SizedBox(
           width: 10,

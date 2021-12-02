@@ -74,10 +74,14 @@ class _RecipesManagerPageState extends State<RecipesManagerPage> {
                                         Provider.of<RecipeManager>(context,
                                                 listen: false)
                                             .delete(
-                                                context,
-                                                userManager.filteredRecipesAdmin[
-                                                        index]['recipeId']
-                                                    as String);
+                                          context: context,
+                                          recipeId: userManager
+                                                  .filteredRecipesAdmin[index]
+                                              ['recipeId'] as String,
+                                          recipeName: userManager
+                                                  .filteredRecipesAdmin[index]
+                                              ['recipeName'] as String,
+                                        );
                                       },
                                       endIcon: Icons.arrow_forward_ios,
                                       text:

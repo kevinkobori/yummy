@@ -31,6 +31,7 @@ class UserModel {
   bool admin = false;
 
   List<dynamic> recipesAdmin = [];
+
   List<String> get recipesAdminIds {
     final List<String> newList = [];
     recipesAdmin.map((recipe) {
@@ -76,10 +77,11 @@ class UserModel {
   }
 
   void setRecipesAdmin(
-      {String recipeId, String recipeName, bool recipeExists}) {
+      {String recipeId, String recipeName, bool recipeExists, bool recipeDeleted}) {
     final Map<String, dynamic> data = {
       'recipeId': recipeId,
       'recipeName': recipeName,
+      'recipeDeleted': recipeDeleted,
     };
     if (recipeExists) {
       final int index = recipesAdmin

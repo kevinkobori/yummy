@@ -117,6 +117,7 @@ class Recipe extends ChangeNotifier {
         recipeId: id,
         recipeName: data['name'].toString(),
         recipeExists: false,
+        recipeDeleted: false,
       );
     } else {
       await FirebaseFirestore.instance.doc('recipes/$id').update(data);
@@ -124,6 +125,7 @@ class Recipe extends ChangeNotifier {
         recipeId: id,
         recipeName: data['name'].toString(),
         recipeExists: true,
+        recipeDeleted: false,
       );
     }
 
@@ -165,9 +167,9 @@ class Recipe extends ChangeNotifier {
     loading = false;
   }
 
-  // void delete(String recipeId) {
-  //   FirebaseFirestore.instance.doc('recipes/$recipeId').delete();
-  // }
+  
+  
+  
 
   void delete(String recipeId) {
     FirebaseFirestore.instance
