@@ -151,11 +151,4 @@ class CartManager extends ChangeNotifier {
           .doc(cartBrand.id)
           .update(cartBrand.toCartItemMap());
   }
-
-  bool get isCartValid {
-    for (final cartBrand in items) {
-      if (!cartBrand.hasStock) return false;
-    }
-    return true;
-  }
 }

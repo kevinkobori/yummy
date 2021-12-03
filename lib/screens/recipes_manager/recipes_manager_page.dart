@@ -40,7 +40,7 @@ class _RecipesManagerPageState extends State<RecipesManagerPage> {
             child: CustomManagerAppBar(
               manager: userManager,
               searchHintText: 'Pesquisar ingrediente',
-              appBarTitle: 'Minhas Receitas',
+              appBarTitle: Text('Minhas Receitas'),
             ),
           ),
           extendBody: true,

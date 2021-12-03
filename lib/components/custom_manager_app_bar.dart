@@ -11,7 +11,8 @@ class CustomManagerAppBar extends StatefulWidget {
   }) : super(key: key);
 
   final dynamic manager;
-  final String appBarTitle, searchHintText;
+  final String searchHintText;
+  final Text appBarTitle;
 
   @override
   _CustomManagerAppBarState createState() => _CustomManagerAppBarState();
@@ -40,7 +41,7 @@ class _CustomManagerAppBarState extends State<CustomManagerAppBar> {
                 ),
               ],
             )
-          : Text(widget.appBarTitle),
+          : widget.appBarTitle,
       actions: onSearchActive == true
           ? [
               Container(),

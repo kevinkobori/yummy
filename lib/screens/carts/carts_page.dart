@@ -53,7 +53,7 @@ class _CartsPageState extends State<CartsPage> {
                   child: CustomManagerAppBar(
                     manager: cartManager,
                     searchHintText: 'Pesquisar lista',
-                    appBarTitle: 'Minhas listas',
+                    appBarTitle: Text('Minhas listas'),
                   ),
                 ),
                 extendBody: true,

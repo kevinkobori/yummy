@@ -54,51 +54,54 @@ class CartScreen extends StatelessWidget {
                         title: 'Sua lista está vazia',
                         icon: Icon(Icons.error),
                       )
-                    : ListView.builder(
-                        physics: const ClampingScrollPhysics(),
-                        itemCount: cartManager.items.length,
-                        itemBuilder: (_, index) {
-                          return cartManager.items.length - 1 == index
-                              ? Column(
-                                  children: [
-                                    DelayedDisplay(
-                                      delay: const Duration(milliseconds: 400),
-                                      child: CartTile(
-                                          cartManager.items[index], true),
-                                    ),
-                                    Divider(
-                                      color: AppColors.rosaClaro,
-                                      thickness: 2,
-                                    ),
-                                    DelayedDisplay(
-                                      delay: const Duration(milliseconds: 800),
-                                      slidingBeginOffset:
-                                          const Offset(0.20, 0.0),
-                                      child: PriceCard(
-                                        cartManager: cartManager,
+                    : Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView.builder(
+                          physics: const ClampingScrollPhysics(),
+                          itemCount: cartManager.items.length,
+                          itemBuilder: (_, index) {
+                            return cartManager.items.length - 1 == index
+                                ? Column(
+                                    children: [
+                                      DelayedDisplay(
+                                        delay: const Duration(milliseconds: 400),
+                                        child: CartTile(
+                                            cartManager.items[index], true),
                                       ),
-                                    ),
-                                    Divider(
-                                      color: AppColors.rosaClaro,
-                                      thickness: 2,
-                                    ),
-                                  ],
-                                )
-                              : Column(
-                                  children: [
-                                    DelayedDisplay(
-                                      delay: const Duration(milliseconds: 400),
-                                      child: CartTile(
-                                          cartManager.items[index], true),
-                                    ),
-                                    Divider(
-                                      color: AppColors.azulMarinhoEscuro,
-                                      thickness: 2,
-                                    ),
-                                  ],
-                                );
-                        },
-                      ),
+                                      Divider(
+                                        color: AppColors.azulMarinhoEscuro,
+                                        thickness: 1,
+                                      ),
+                                      DelayedDisplay(
+                                        delay: const Duration(milliseconds: 800),
+                                        slidingBeginOffset:
+                                            const Offset(0.20, 0.0),
+                                        child: PriceCard(
+                                          cartManager: cartManager,
+                                        ),
+                                      ),
+                                      Divider(
+                                        color: AppColors.azulMarinhoEscuro,
+                                        thickness: 1,
+                                      ),
+                                    ],
+                                  )
+                                : Column(
+                                    children: [
+                                      DelayedDisplay(
+                                        delay: const Duration(milliseconds: 400),
+                                        child: CartTile(
+                                            cartManager.items[index], true),
+                                      ),
+                                      Divider(
+                                        color: AppColors.azulMarinhoEscuro,
+                                        thickness: 1,
+                                      ),
+                                    ],
+                                  );
+                          },
+                        ),
+                    ),
               );
             },
           );

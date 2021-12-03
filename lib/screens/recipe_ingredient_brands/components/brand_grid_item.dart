@@ -41,9 +41,6 @@ class _BrandGridItemState extends State<BrandGridItem> {
         ),
         child: Column(
           children: [
-            const SizedBox(
-              height: 4,
-            ),
             Stack(
               children: [
                 Padding(

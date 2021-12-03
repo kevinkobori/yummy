@@ -34,6 +34,7 @@ class EditBrandSize extends StatelessWidget {
                 focusedBorder: outlineInputBorder,
                 border: outlineInputBorder,
                 labelText: 'Título',
+                hintText: '395g/500ml/1L',
                 isDense: true,
               ),
               validator: (name) {
@@ -59,6 +60,7 @@ class EditBrandSize extends StatelessWidget {
                 focusedBorder: outlineInputBorder,
                 border: outlineInputBorder,
                 labelText: 'Preço R\$',
+                hintText: '4.89',
                 isDense: true,
               ),
               keyboardType:

@@ -103,12 +103,4 @@ class CartBrand extends ChangeNotifier {
     quantity--;
     notifyListeners();
   }
-
-  bool get hasStock {
-    if (brand != null && brand.deleted) return false;
-
-    final size = brandSize;
-    if (size == null) return false;
-    return size.stock >= quantity;
-  }
 }

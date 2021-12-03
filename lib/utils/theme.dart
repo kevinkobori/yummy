@@ -10,7 +10,7 @@ ThemeData theme() {
     scaffoldBackgroundColor: Colors.white,
     canvasColor: Colors.white,
     accentColor: AppColors.rosaClaro, //AppColors.rosaClaro,
-    fontFamily: "Muli",
+    fontFamily: 'QuicksandBold', //"Muli",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
@@ -46,6 +46,7 @@ InputDecorationTheme inputDecorationTheme() {
     enabledBorder: _outlineInputBorder,
     focusedBorder: _outlineInputBorder,
     border: _outlineInputBorder,
+    hintStyle: TextStyle(color: Colors.grey[300]),
   );
 }
 

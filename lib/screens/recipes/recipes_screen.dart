@@ -45,7 +45,11 @@ class _RecipesScreenState extends State<RecipesScreen> {
             child: CustomManagerAppBar(
               manager: recipeManager,
               searchHintText: 'Pesquisar receita',
-              appBarTitle: 'Yummy',
+              appBarTitle: Text('Yummy',
+                  style: TextStyle(
+                    fontFamily: 'FuzzyBubbles',
+                    color: AppColors.rosaClaro,
+                  )),
             ),
           ),
           extendBody: true,

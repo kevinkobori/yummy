@@ -73,7 +73,7 @@ class _RecipeBrandsScreenState extends State<RecipeBrandsScreen> {
                       child: CustomManagerAppBar(
                         manager: brandManager,
                         searchHintText: 'Pesquisar marca',
-                        appBarTitle: 'Produtos / Marcas',
+                        appBarTitle: Text('Produtos / Marcas'),
                       ),
                     ),
                     body: AnimatedBuilder(

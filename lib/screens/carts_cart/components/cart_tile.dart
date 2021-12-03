@@ -50,36 +50,26 @@ class CartTile extends StatelessWidget {
                       const SizedBox(height: 8),
                       Consumer<CartBrand>(
                         builder: (_, cartBrand, __) {
-                          if (cartBrand.hasStock)
-                            return Text.rich(
-                              TextSpan(
-                                text: cartBrandUnitPrice,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: Theme.of(context).accentColor,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: cartBrand.quantity.toString() == '1'
-                                        ? ' x ${cartBrand.quantity} unidade'
-                                        : ' x ${cartBrand.quantity} unidades',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      color: AppColors.azulClaro,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
-                          else
-                            return const Text(
-                              'Sem estoque suficiente',
+                          return Text.rich(
+                            TextSpan(
+                              text: cartBrandUnitPrice,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.red,
-                                fontSize: 12,
+                                color: Theme.of(context).accentColor,
                               ),
-                            );
+                              children: [
+                                TextSpan(
+                                  text: cartBrand.quantity.toString() == '1'
+                                      ? ' x ${cartBrand.quantity} unidade'
+                                      : ' x ${cartBrand.quantity} unidades',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColors.azulClaro,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
                         },
                       ),
                     ],
