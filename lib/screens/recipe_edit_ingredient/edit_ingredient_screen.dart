@@ -78,6 +78,23 @@ class _EditIngredientScreenState extends State<EditIngredientScreen> {
                         onSaved: (name) => widget.ingredient.name = name,
                       ),
                       const SizedBox(height: 16),
+                      TextFormField(
+                        initialValue: widget.ingredient.description,
+                        style: const TextStyle(fontSize: 16),
+                        decoration: const InputDecoration(
+                          labelText: "Medida",
+                          labelStyle: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                          hintText: "1 colher, 2L, 1kg, 395g",
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                        ),
+                        maxLines: null,
+                        validator: (desc) {
+                          return null;
+                        },
+                        onSaved: (desc) => widget.ingredient.description = desc,
+                      ),
+                      const SizedBox(height: 16),
                       Consumer<Ingredient>(
                         builder: (_, ingredient, __) {
                           if (ingredient.loading)

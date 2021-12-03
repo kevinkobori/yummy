@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:yummy/components/custom_manager_app_bar.dart';
 import 'package:yummy/components/menu_tile.dart';
 import 'package:yummy/components/scroll_listener.dart';
-import 'package:yummy/components/yummy_bottom_search_app_bar_widget.dart';
 import 'package:yummy/controllers/carts/cart_manager.dart';
 import 'package:yummy/controllers/recipes/recipe.dart';
 import 'package:yummy/controllers/user/user_manager.dart';
@@ -86,6 +85,10 @@ class _CartsPageState extends State<CartsPage> {
                                           cartManager.filteredCarts[index].id,
                                       index: index,
                                     );
+                                    //     .then((value) {
+                                    //   cartManager.loadCarts();
+                                    //   cartManager.search = '';
+                                    // });
                                   },
                                   endIcon: Icons.arrow_forward_ios,
                                   onEndIcon: () {},
@@ -110,6 +113,10 @@ class _CartsPageState extends State<CartsPage> {
                                         builder: (_) => CartScreen(),
                                       ),
                                     );
+                                    // .then((value) {
+                                    //   cartManager.loadCarts();
+                                    //   cartManager.search = '';
+                                    // });
                                   },
                                 ),
                               ),

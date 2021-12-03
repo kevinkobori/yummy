@@ -36,20 +36,38 @@ class MenuTile extends StatelessWidget {
               children: [
                 if (icon != null)
                   SizedBox(
-                      width: 30,
-                      child: Icon(
-                        icon,
-                        color: Theme.of(context).accentColor,
-                      )),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: Text(
-                    text,
-                    style: TextStyle(
+                    width: 30,
+                    child: Icon(
+                      icon,
                       color: Theme.of(context).accentColor,
                     ),
                   ),
-                ),
+                const SizedBox(width: 20),
+                label != null
+                    ? Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              text,
+                              style: TextStyle(
+                                color: Theme.of(context).accentColor,
+                              ),
+                            ),
+                            Text(
+                              label,
+                            ),
+                          ],
+                        ),
+                      )
+                    : Expanded(
+                        child: Text(
+                          text,
+                          style: TextStyle(
+                            color: Theme.of(context).accentColor,
+                          ),
+                        ),
+                      ),
                 InkWell(
                   onTap: onEndIcon,
                   child: Icon(

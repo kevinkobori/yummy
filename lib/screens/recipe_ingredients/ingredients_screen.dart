@@ -66,7 +66,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                   margin:
                                       const EdgeInsets.fromLTRB(16, 8, 16, 8),
                                   padding:
-                                      const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                                      const EdgeInsets.fromLTRB(16, 8, 16, 16),
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                         color: AppColors.azulMarinhoEscuro),
@@ -169,7 +169,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         margin: const EdgeInsets.fromLTRB(
                                             16, 8, 16, 8),
                                         padding: const EdgeInsets.fromLTRB(
-                                            16, 16, 16, 16),
+                                            16, 8, 16, 16),
                                         decoration: BoxDecoration(
                                           border: Border.all(
                                               color:
@@ -280,7 +280,7 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                                 .name,
                                             label: ingredientManager
                                                 .filteredIngredients[index]
-                                                .name,
+                                                .description,
                                             width: 20,
                                             press: () {
                                               ingredient.setIngredient(
@@ -347,7 +347,8 @@ class _RecipeIngredientsScreenState extends State<RecipeIngredientsScreen> {
                                         text: ingredientManager
                                             .filteredIngredients[index].name,
                                         label: ingredientManager
-                                            .filteredIngredients[index].name,
+                                            .filteredIngredients[index]
+                                            .description,
                                         width: 20,
                                         press: () {
                                           ingredient.setIngredient(

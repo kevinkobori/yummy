@@ -68,7 +68,7 @@ class Ingredient extends ChangeNotifier {
       'recipeName': recipeName,
       'name': name,
       'type': 0.1,
-      'description': '...',
+      'description': description,
       'autoplay': autoplay,
       'deleted': deleted
     };
@@ -107,7 +107,7 @@ class Ingredient extends ChangeNotifier {
       name: name,
       recipeId: recipeId,
       recipeName: recipeName,
-      description: '...',
+      description: description,
       type: type,
       autoplay: autoplay,
       deleted: deleted,
