@@ -42,7 +42,10 @@ class UserModel {
   }
 
   CollectionReference get cartsReference =>
-      FirebaseFirestore.instance.doc('users/$id').collection('carts');
+      userReference.collection('carts');
+
+  DocumentReference get userReference =>
+      FirebaseFirestore.instance.doc('users/$id');
 
   Future<void> saveData() async {
     await FirebaseFirestore.instance.doc('users/$id').set(toMap());

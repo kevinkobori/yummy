@@ -65,12 +65,13 @@ class CartManager extends ChangeNotifier {
 
     carts = cartSnap.docs;
     carts.map((doc) {
-      loadCartItems(doc.id);
+      loadCartItems(recipeId: doc.id);
     }).toList();
   }
 
-  Future<void> loadCartItems(String recipeId) async {
+  Future<void> loadCartItems({String recipeId}) async {
     this.recipeId = recipeId;
+
     final QuerySnapshot cartSnap =
         await user.cartsReference.doc(recipeId).collection('cart').get();
 
@@ -79,16 +80,33 @@ class CartManager extends ChangeNotifier {
         .toList();
   }
 
-  void addToCart(Recipe recipe, Brand brand) {
+  Future<void> createCart({String recipeId, String recipeName}) async {
+    user.cartsReference.doc(recipeId).set({'recipeName': recipeName});
+    await loadCartItems(recipeId: recipeId);
+  }
+
+  Future<void> addToCart(Recipe recipe, Brand brand) async {
+    await user.cartsReference.limit(1).get().then((query) async {
+      if (query.size >= 1) {
+        user.cartsReference.doc(recipeId).get().then((doc) async {
+          if (doc.exists) {
+            await loadCartItems(recipeId: recipe.id);
+          } else {
+            await createCart(recipeId: recipe.id, recipeName: recipe.name);
+          }
+        });
+      } else {
+        await createCart(recipeId: recipe.id, recipeName: recipe.name);
+      }
+    });
+
     try {
-      final e = items.firstWhere((p) => p.stackable(brand));
-      e.increment();
-    } catch (e) {
+      final cartBrandItem = items.firstWhere((p) => p.stackable(brand));
+      cartBrandItem.increment();
+    } catch (_) {
       final cartBrand = CartBrand.fromBrand(brand);
       cartBrand.addListener(_onItemUpdated);
       items.add(cartBrand);
-
-      user.cartsReference.doc(recipe.id).set({'recipeName': recipe.name});
 
       user.cartsReference
           .doc(recipe.id)
@@ -102,16 +120,18 @@ class CartManager extends ChangeNotifier {
 
   void removeOfCart(String recipeId, CartBrand cartBrand) {
     items.removeWhere((p) => p.id == cartBrand.id);
+
+    user.cartsReference
+        .doc(recipeId)
+        .collection('cart')
+        .doc(cartBrand.id)
+        .delete();
+
     if (items.isEmpty) {
       user.cartsReference.doc(recipeId).delete();
       items.clear();
-    } else {
-      user.cartsReference
-          .doc(recipeId)
-          .collection('cart')
-          .doc(cartBrand.id)
-          .delete();
     }
+    
     cartBrand.removeListener(_onItemUpdated);
     notifyListeners();
   }

@@ -99,10 +99,10 @@ class _CartsPageState extends State<CartsPage> {
                                       "${cartManager.filteredCarts[index].data()['recipeName']}",
                                   width: 20,
                                   press: () async {
-                                    await context
-                                        .read<CartManager>()
-                                        .loadCartItems(cartManager
-                                            .filteredCarts[index].id);
+                                  //   await context
+                                  //       .read<CartManager>()
+                                  //       .loadCartItems(cartManager
+                                  //           .filteredCarts[index].id);
 
                                     await recipe.loadCurrentRecipe(
                                         cartManager.filteredCarts[index].id);

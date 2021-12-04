@@ -158,11 +158,11 @@ class BrandScreen extends StatelessWidget {
                               onPressed: brand.selectedSize != null
                                   ? () async {
                                       if (userManager.isLoggedIn) {
-                                        await context
-                                            .read<CartManager>()
-                                            .loadCartItems(recipe.id);
+                                        // await context
+                                        //     .read<CartManager>()
+                                        //     .loadCartItems(recipeId: recipe.id);
 
-                                        context
+                                        await context
                                             .read<CartManager>()
                                             .addToCart(recipe, brand);
 

@@ -67,7 +67,7 @@ class _EditIngredientScreenState extends State<EditIngredientScreen> {
                           labelText: "Nome do Igrediente",
                           labelStyle: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
-                          hintText: "200g de Leite Condensado",
+                          hintText: "Leite Condensado",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                         ),
                         style: const TextStyle(fontSize: 16),
