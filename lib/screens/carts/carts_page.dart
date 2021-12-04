@@ -113,8 +113,7 @@ class _CartsPageState extends State<CartsPage> {
                                       MaterialPageRoute(
                                         builder: (_) => CartScreen(),
                                       ),
-                                    )
-                                    .then((value) {
+                                    ).then((value) {
                                       cartManager.loadCarts();
                                       cartManager.search = '';
                                     });

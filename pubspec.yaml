@@ -3,7 +3,7 @@ description: Your recipes here.
 
 publish_to: "none"
 
-version: 1.6.7+23
+version: 1.6.8+24
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
