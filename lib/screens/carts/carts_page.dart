@@ -84,11 +84,11 @@ class _CartsPageState extends State<CartsPage> {
                                       recipeId:
                                           cartManager.filteredCarts[index].id,
                                       index: index,
-                                    );
-                                    //     .then((value) {
-                                    //   cartManager.loadCarts();
-                                    //   cartManager.search = '';
-                                    // });
+                                    )
+                                        .then((value) {
+                                      cartManager.loadCarts();
+                                      cartManager.search = '';
+                                    });
                                   },
                                   endIcon: Icons.arrow_forward_ios,
                                   onEndIcon: () {},
@@ -99,10 +99,11 @@ class _CartsPageState extends State<CartsPage> {
                                       "${cartManager.filteredCarts[index].data()['recipeName']}",
                                   width: 20,
                                   press: () async {
-                                  //   await context
-                                  //       .read<CartManager>()
-                                  //       .loadCartItems(cartManager
-                                  //           .filteredCarts[index].id);
+                                    await context
+                                        .read<CartManager>()
+                                        .loadCartItems(
+                                            recipeId: cartManager
+                                                .filteredCarts[index].id);
 
                                     await recipe.loadCurrentRecipe(
                                         cartManager.filteredCarts[index].id);
@@ -112,11 +113,11 @@ class _CartsPageState extends State<CartsPage> {
                                       MaterialPageRoute(
                                         builder: (_) => CartScreen(),
                                       ),
-                                    );
-                                    // .then((value) {
-                                    //   cartManager.loadCarts();
-                                    //   cartManager.search = '';
-                                    // });
+                                    )
+                                    .then((value) {
+                                      cartManager.loadCarts();
+                                      cartManager.search = '';
+                                    });
                                   },
                                 ),
                               ),

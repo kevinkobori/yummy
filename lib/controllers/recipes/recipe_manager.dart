@@ -22,8 +22,8 @@ class RecipeManager extends ChangeNotifier {
     if (search.isEmpty) {
       filteredRecipes.addAll(recipeRecipe);
     } else {
-      filteredRecipes.addAll(recipeRecipe.where((p) {
-        if (p.name.toLowerCase().contains(search.toLowerCase())) {
+      filteredRecipes.addAll(recipeRecipe.where((recipe) {
+        if (recipe.name.toLowerCase().contains(search.toLowerCase())) {
           return true;
         } else {
           return false;

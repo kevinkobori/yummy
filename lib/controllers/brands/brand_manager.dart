@@ -19,8 +19,8 @@ class BrandManager extends ChangeNotifier {
     if (search.isEmpty) {
       filteredBrands.addAll(recipeBrands);
     } else {
-      filteredBrands.addAll(recipeBrands.where((p) {
-        if (p.name.toLowerCase().contains(search.toLowerCase())) {
+      filteredBrands.addAll(recipeBrands.where((brand) {
+        if (brand.name.toLowerCase().contains(search.toLowerCase())) {
           return true;
         } else {
           return false;
