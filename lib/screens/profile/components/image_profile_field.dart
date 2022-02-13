@@ -37,7 +37,10 @@ class _ImageProfileFieldState extends State<ImageProfileField> {
         setState(() {
           image = listImages[0] as File;
         });
-        userManager.user.uploadImageProfile(listImages[0] as File).then((_) {
+        userManager.user
+            .uploadImageProfile(listImages[0] as File)
+            .then((_) async {
+          await userManager.loadCurrentUser();
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (_) => ProfilePage()),
@@ -64,16 +67,18 @@ class _ImageProfileFieldState extends State<ImageProfileField> {
               onPressed: () {
                 if (Platform.isAndroid)
                   showModalBottomSheet(
-                      context: context,
-                      builder: (_) => ImageSourceSheet(
-                            onImagesSelected: onImagesSelected,
-                          ));
+                    context: context,
+                    builder: (_) => ImageSourceSheet(
+                      onImagesSelected: onImagesSelected,
+                    ),
+                  );
                 else
                   showCupertinoModalPopup(
-                      context: context,
-                      builder: (_) => ImageSourceSheet(
-                            onImagesSelected: onImagesSelected,
-                          ));
+                    context: context,
+                    builder: (_) => ImageSourceSheet(
+                      onImagesSelected: onImagesSelected,
+                    ),
+                  );
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.white),

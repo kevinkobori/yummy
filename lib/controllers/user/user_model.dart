@@ -49,6 +49,7 @@ class UserModel {
 
   Future<void> saveData() async {
     await FirebaseFirestore.instance.doc('users/$id').set(toMap());
+    // notifyListeners();
   }
 
   Map<String, dynamic> toMap() {

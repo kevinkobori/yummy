@@ -11,7 +11,7 @@
         - navigation ⚠️✅
         - item name: The getter 'name' was called on null. ⚠️⭕
         - SOLUTION: maybe set a loading to wait the progress to finish
-
+    - Image profile not uppdate uin real time ⚠️✅
 ## Desirable:
     - Internationalization ⭕
     - Add recipe image on recipe ingredients page ⭕
