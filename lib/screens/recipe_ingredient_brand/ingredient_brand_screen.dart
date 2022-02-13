@@ -1,5 +1,4 @@
 import 'package:delayed_display/delayed_display.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -13,9 +12,14 @@ import '../recipe_edit_brand/edit_brand_screen.dart';
 import 'components/size_widget.dart';
 
 class BrandScreen extends StatelessWidget {
-  const BrandScreen(this.brand);
+  const BrandScreen({
+    @required this.brand,
+    @required this.fromCartNavigation,
+  });
 
   final Brand brand;
+
+  final bool fromCartNavigation;
 
   @override
   Widget build(BuildContext context) {
@@ -158,20 +162,29 @@ class BrandScreen extends StatelessWidget {
                               onPressed: brand.selectedSize != null
                                   ? () async {
                                       if (userManager.isLoggedIn) {
-                                        // await context
-                                        //     .read<CartManager>()
-                                        //     .loadCartItems(recipeId: recipe.id);
+                                        if (fromCartNavigation) {
+                                          await context
+                                              .read<CartManager>()
+                                              .addToCart(recipe, brand);
 
-                                        await context
-                                            .read<CartManager>()
-                                            .addToCart(recipe, brand);
+                                          Navigator.of(context).pop();
+                                        } else {
+                                          // await context
+                                          //     .read<CartManager>()
+                                          //     .loadCartItems(recipeId: recipe.id);
 
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => CartScreen(),
-                                          ),
-                                        );
+                                          await context
+                                              .read<CartManager>()
+                                              .addToCart(recipe, brand);
+
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  CartScreen(),
+                                            ),
+                                          );
+                                        }
                                       } else {
                                         Navigator.push(
                                           context,

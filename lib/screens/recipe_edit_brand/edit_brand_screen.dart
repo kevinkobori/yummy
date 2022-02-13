@@ -124,7 +124,10 @@ class EditBrandScreen extends StatelessWidget {
                                         Navigator.pushReplacement(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (_) => BrandScreen(brand),
+                                            builder: (_) => BrandScreen(
+                                              brand: brand,
+                                              fromCartNavigation: false,
+                                            ),
                                           ),
                                         );
                                       }

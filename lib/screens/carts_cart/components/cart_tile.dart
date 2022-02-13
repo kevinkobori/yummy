@@ -10,6 +10,7 @@ class CartTile extends StatelessWidget {
 
   final CartBrand cartBrand;
   final bool showControls;
+  
   @override
   Widget build(BuildContext context) {
     NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
@@ -22,7 +23,12 @@ class CartTile extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => BrandScreen(cartBrand.brand)),
+            MaterialPageRoute(
+              builder: (_) => BrandScreen(
+                brand: cartBrand.brand,
+                fromCartNavigation: true,
+              ),
+            ),
           );
         },
         child: Padding(

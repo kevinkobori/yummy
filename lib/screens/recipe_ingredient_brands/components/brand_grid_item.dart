@@ -28,7 +28,12 @@ class _BrandGridItemState extends State<BrandGridItem> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => BrandScreen(widget.brand)),
+          MaterialPageRoute(
+            builder: (_) => BrandScreen(
+              brand: widget.brand,
+              fromCartNavigation: false,
+            ),
+          ),
         );
       },
       child: Container(

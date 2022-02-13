@@ -1,6 +1,20 @@
 # Yummy v1.6.3
 
-## A new Flutter project.
+## Need to fix:
+    - Login with google ⚠️✅
+        - SOLUTION: fixed with sha1 ⚠️
+    - Stream update page when login ⚠️✅
+        - SOLUTION: notifyListeners() on SignIn(); ⚠️
+    - .then(): ⚠️⭕
+        - fix with notifyListeners(); ⚠️⭕
+    - Cart insert new item on details navigation return and not push logic when start from cart page ⚠️⭕
+        - navigation ⚠️✅
+        - item name: The getter 'name' was called on null. ⚠️⭕
+        - SOLUTION: maybe set a loading to wait the progress to finish
+
+## Desirable:
+    - Internationalization ⭕
+    - Add recipe image on recipe ingredients page ⭕
 
 # Getting Started
 
