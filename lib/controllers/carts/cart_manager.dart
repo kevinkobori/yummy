@@ -58,6 +58,7 @@ class CartManager extends ChangeNotifier {
     if (user != null) {
       loadCarts();
     }
+    notifyListeners(); // why?
   }
 
   Future<void> loadCarts() async {
@@ -67,6 +68,7 @@ class CartManager extends ChangeNotifier {
     carts.map((doc) {
       loadCartItems(recipeId: doc.id);
     }).toList();
+    notifyListeners(); // why??
   }
 
   Future<void> loadCartItems({String recipeId}) async {
@@ -78,6 +80,7 @@ class CartManager extends ChangeNotifier {
     items = cartSnap.docs
         .map((d) => CartBrand.fromDocument(d)..addListener(_onItemUpdated))
         .toList();
+    notifyListeners(); // why?
   }
 
   Future<void> createCart({String recipeId, String recipeName}) async {
@@ -170,5 +173,6 @@ class CartManager extends ChangeNotifier {
           .collection('cart')
           .doc(cartBrand.id)
           .update(cartBrand.toCartItemMap());
+    notifyListeners(); // why?
   }
 }

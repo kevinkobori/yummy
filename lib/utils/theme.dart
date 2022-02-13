@@ -67,12 +67,32 @@ AppBarTheme appBarTheme() {
       color: AppColors.azulMarinhoEscuro,
     ),
     titleSpacing: 0,
-    textTheme: TextTheme(
-      headline6: TextStyle(
-        color: AppColors.azulMarinhoEscuro,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
+    titleTextStyle: TextStyle(
+      color: AppColors.azulMarinhoEscuro,
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
     ),
+    // textTheme: TextTheme(
+    //   bodyText1: TextStyle(
+    //     color: AppColors.azulMarinhoEscuro,
+    //     fontSize: 18,
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    //   bodyText2: TextStyle(
+    //     color: AppColors.azulMarinhoEscuro,
+    //     fontSize: 18,
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    //   headline1: TextStyle(
+    //     color: AppColors.azulMarinhoEscuro,
+    //     fontSize: 18,
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    //   headline6: TextStyle(
+    //     color: AppColors.azulMarinhoEscuro,
+    //     fontSize: 18,
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    // ),
   );
 }

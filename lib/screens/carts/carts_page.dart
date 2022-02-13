@@ -104,10 +104,12 @@ class _CartsPageState extends State<CartsPage> {
                                         .loadCartItems(
                                             recipeId: cartManager
                                                 .filteredCarts[index].id);
-
+  print('lolol:>>' +
+                                        cartManager.filteredCarts[index].id);
                                     await recipe.loadCurrentRecipe(
                                         cartManager.filteredCarts[index].id);
-
+                                    print('lolol:>>' +
+                                        cartManager.filteredCarts[index].id);
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

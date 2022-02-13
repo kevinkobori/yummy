@@ -88,6 +88,7 @@ class UserManager extends ChangeNotifier {
 
       _loading = false;
     }
+    notifyListeners();
   }
 
   Future<void> signOut() async {
